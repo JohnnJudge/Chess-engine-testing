@@ -1204,7 +1204,7 @@ void parse_go(std::string command)
     char* write = new char[command.size() - 1];
     std::copy(command.begin(), command.end(), write);
     write[command.size()] = '\0';
-    int depth = 0;
+    int depth = 6;
     size_t cpos = command.find("depth");
     if(cpos != std::string::npos)
     {
@@ -1212,8 +1212,7 @@ void parse_go(std::string command)
     }else{
 
     }
-    std::cout<<depth<<"\n";
-    //search_pos
+    search_position(depth);
     delete [] write;
 }
 
